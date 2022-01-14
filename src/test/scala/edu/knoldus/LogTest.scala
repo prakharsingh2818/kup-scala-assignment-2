@@ -15,4 +15,9 @@ class LogTest extends AnyFlatSpec {
     val message = "check"
     assertResult("[INFO]:check")(log.logMessage(message))
   }
+
+  "Log message" should "be invalid" in {
+    val message = "check"
+    assert("[]:check" != log.logMessage(message))
+  }
 }
