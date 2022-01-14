@@ -23,4 +23,8 @@ class TailRecursiveFactorialTest extends AnyFlatSpec {
     val number: Int = 1
     assertResult(1)(tailRecursiveFactorialCalculator.factorial(number))
   }
+  "Factorial of 4" should "not be" in {
+    val number: Int = 4
+    assert(64 != tailRecursiveFactorialCalculator.factorial(number))
+  }
 }
